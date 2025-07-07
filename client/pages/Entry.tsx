@@ -5,7 +5,7 @@ export default function Entry() {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/payment");
+    navigate("/terms");
   };
 
   return (
