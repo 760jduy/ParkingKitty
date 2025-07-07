@@ -2,11 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
-import { Menu, Info, ChevronRight } from "lucide-react";
+import { ChevronLeft, Info, ChevronRight } from "lucide-react";
 
 export default function Zone() {
   const navigate = useNavigate();
   const [zoneNumber, setZoneNumber] = useState("");
+
+  const handleBack = () => {
+    navigate("/profile");
+  };
 
   const handleContinue = () => {
     if (zoneNumber.trim()) {
@@ -18,8 +22,11 @@ export default function Zone() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gray-700 text-white p-4 flex items-center">
-        <button className="flex items-center justify-center w-8 h-8 rounded-full mr-4 hover:bg-gray-600 transition-colors">
-          <Menu className="w-5 h-5" />
+        <button
+          onClick={handleBack}
+          className="flex items-center justify-center w-8 h-8 rounded-full mr-4 hover:bg-gray-600 transition-colors"
+        >
+          <ChevronLeft className="w-5 h-5" />
         </button>
         <h1 className="text-lg font-medium">Enter Zone</h1>
       </div>
