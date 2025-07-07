@@ -32,7 +32,7 @@ export default function Profile() {
     };
     localStorage.setItem("parkingKittyProfile", JSON.stringify(profileData));
 
-    navigate("/zone");
+    navigate("/vehicle");
   };
 
   const handleInputChange = (field: string, value: string) => {
