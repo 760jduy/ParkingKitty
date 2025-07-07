@@ -10,7 +10,7 @@ export default function Terms() {
   };
 
   const handleAccept = () => {
-    navigate("/payment");
+    navigate("/zone");
   };
 
   const handleDecline = () => {

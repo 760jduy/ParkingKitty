@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Entry from "./pages/Entry";
 import Terms from "./pages/Terms";
+import Zone from "./pages/Zone";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -18,6 +19,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Entry />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/zone" element={<Zone />} />
         <Route path="/payment" element={<Index />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
