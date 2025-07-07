@@ -9,6 +9,7 @@ import Entry from "./pages/Entry";
 import Terms from "./pages/Terms";
 import Profile from "./pages/Profile";
 import Zone from "./pages/Zone";
+import ParkingDuration from "./pages/ParkingDuration";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/terms" element={<Terms />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/zone" element={<Zone />} />
+        <Route path="/duration" element={<ParkingDuration />} />
         <Route path="/payment" element={<Index />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
