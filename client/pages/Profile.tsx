@@ -118,7 +118,7 @@ export default function Profile() {
               <Input
                 id="phone"
                 type="tel"
-                placeholder="(929) 246-3223"
+                placeholder=""
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 className="h-12 text-base border-gray-300 focus:border-payment focus:ring-payment"
