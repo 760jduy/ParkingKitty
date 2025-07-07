@@ -12,103 +12,133 @@ export default function Entry() {
     <div className="min-h-screen bg-gray-800 flex flex-col items-center justify-center p-4 text-white">
       <div className="flex flex-col items-center space-y-8 max-w-sm w-full">
         {/* Cat Logo */}
-        <div className="relative mb-4">
+        <div className="relative mb-8">
           {/* WiFi Signal Lines */}
-          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-            <svg className="w-16 h-8" viewBox="0 0 64 32">
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+            <svg className="w-12 h-6" viewBox="0 0 48 24">
               <path
-                d="M8 24 C8 16, 16 8, 32 8 C48 8, 56 16, 56 24"
+                d="M6 20 C6 14, 12 8, 24 8 C36 8, 42 14, 42 20"
                 fill="none"
                 stroke="#E91E8C"
-                strokeWidth="3"
+                strokeWidth="2.5"
                 strokeLinecap="round"
               />
               <path
-                d="M16 22 C16 18, 22 14, 32 14 C42 14, 48 18, 48 22"
+                d="M12 18 C12 15, 16 12, 24 12 C32 12, 36 15, 36 18"
                 fill="none"
                 stroke="#E91E8C"
-                strokeWidth="3"
+                strokeWidth="2.5"
                 strokeLinecap="round"
               />
               <path
-                d="M24 20 C24 18, 26 16, 32 16 C38 16, 40 18, 40 20"
+                d="M18 16 C18 14.5, 20 13, 24 13 C28 13, 30 14.5, 30 16"
                 fill="none"
                 stroke="#E91E8C"
-                strokeWidth="3"
+                strokeWidth="2.5"
                 strokeLinecap="round"
               />
             </svg>
           </div>
 
-          {/* Cat Face Container */}
-          <div className="relative w-28 h-28">
-            {/* Main Cat Head */}
-            <div className="w-28 h-28 bg-white rounded-full border-4 border-payment flex items-center justify-center relative">
-              {/* Cat Ears */}
-              <div className="absolute -top-2 left-6">
-                <div className="w-8 h-10 bg-payment rounded-t-full transform -rotate-12"></div>
-                <div className="absolute top-2 left-1 w-4 h-6 bg-white rounded-t-full"></div>
-              </div>
-              <div className="absolute -top-2 right-6">
-                <div className="w-8 h-10 bg-payment rounded-t-full transform rotate-12"></div>
-                <div className="absolute top-2 right-1 w-4 h-6 bg-white rounded-t-full"></div>
-              </div>
+          {/* Cat Face - Complete SVG */}
+          <svg className="w-24 h-24 mx-auto" viewBox="0 0 96 96">
+            {/* Cat Head Circle */}
+            <circle
+              cx="48"
+              cy="52"
+              r="32"
+              fill="white"
+              stroke="#E91E8C"
+              strokeWidth="4"
+            />
 
-              {/* Cat Face Features */}
-              <div className="text-payment relative">
-                {/* Eyes - happy closed eyes */}
-                <div className="flex justify-center space-x-4 mb-2">
-                  <svg className="w-3 h-2" viewBox="0 0 12 8">
-                    <path
-                      d="M2 6 Q6 2 10 6"
-                      fill="none"
-                      stroke="#E91E8C"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  <svg className="w-3 h-2" viewBox="0 0 12 8">
-                    <path
-                      d="M2 6 Q6 2 10 6"
-                      fill="none"
-                      stroke="#E91E8C"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+            {/* Cat Ears */}
+            <path
+              d="M25 30 L35 15 L45 30 Z"
+              fill="#E91E8C"
+              stroke="#E91E8C"
+              strokeWidth="2"
+            />
+            <path
+              d="M51 30 L61 15 L71 30 Z"
+              fill="#E91E8C"
+              stroke="#E91E8C"
+              strokeWidth="2"
+            />
 
-                {/* Nose */}
-                <div className="w-2 h-2 bg-payment rounded-full mx-auto mb-1"></div>
+            {/* Inner Ears */}
+            <path d="M29 28 L33 20 L37 28 Z" fill="white" />
+            <path d="M59 28 L63 20 L67 28 Z" fill="white" />
 
-                {/* Mouth - happy cat smile */}
-                <div className="flex justify-center space-x-1 mb-1">
-                  <svg className="w-3 h-2" viewBox="0 0 12 8">
-                    <path
-                      d="M2 2 Q6 6 10 2"
-                      fill="none"
-                      stroke="#E91E8C"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+            {/* Eyes - Happy closed curved lines */}
+            <path
+              d="M38 46 Q42 42 46 46"
+              fill="none"
+              stroke="#E91E8C"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M50 46 Q54 42 58 46"
+              fill="none"
+              stroke="#E91E8C"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
 
-                {/* Tongue */}
-                <div className="w-2 h-3 bg-payment rounded-b-full mx-auto"></div>
+            {/* Nose */}
+            <path d="M46 52 L48 50 L50 52 L48 54 Z" fill="#E91E8C" />
 
-                {/* Whiskers */}
-                <div className="absolute left-2 top-4">
-                  <div className="w-4 h-0.5 bg-payment rotate-12"></div>
-                  <div className="w-4 h-0.5 bg-payment -rotate-12 mt-1"></div>
-                </div>
-                <div className="absolute right-2 top-4">
-                  <div className="w-4 h-0.5 bg-payment -rotate-12"></div>
-                  <div className="w-4 h-0.5 bg-payment rotate-12 mt-1"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+            {/* Mouth - Happy smile */}
+            <path
+              d="M42 58 Q48 62 54 58"
+              fill="none"
+              stroke="#E91E8C"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+
+            {/* Tongue */}
+            <ellipse cx="48" cy="64" rx="2" ry="4" fill="#E91E8C" />
+
+            {/* Whiskers */}
+            <line
+              x1="28"
+              y1="50"
+              x2="36"
+              y2="48"
+              stroke="#E91E8C"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="28"
+              y1="56"
+              x2="36"
+              y2="56"
+              stroke="#E91E8C"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="60"
+              y1="48"
+              x2="68"
+              y2="50"
+              stroke="#E91E8C"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="60"
+              y1="56"
+              x2="68"
+              y2="56"
+              stroke="#E91E8C"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
         </div>
 
         {/* Title */}
