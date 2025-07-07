@@ -17,12 +17,16 @@ export default function ParkingDuration() {
   const [minutes, setMinutes] = useState("");
 
   const handleBack = () => {
-    navigate("/zone");
+    navigate("/payment");
   };
 
   const handleContinue = () => {
     if (hours || minutes) {
-      navigate("/payment");
+      // Final step - could show success message or complete the flow
+      alert(
+        `Parking purchased! Duration: ${hours || 0}h ${minutes || 0}m for $${calculatePrice()}`,
+      );
+      navigate("/");
     }
   };
 
@@ -159,7 +163,7 @@ export default function ParkingDuration() {
             disabled={!isFormValid}
             className="w-full h-12 bg-payment hover:bg-payment/90 disabled:bg-gray-300 text-white font-medium text-base rounded-full"
           >
-            Continue to Payment
+            Complete Purchase
             <ChevronRight className="w-5 h-5 ml-2" />
           </Button>
         </div>

@@ -10,8 +10,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
+  const navigate = useNavigate();
   const [cardNumber, setCardNumber] = useState("");
   const [expiryMonth, setExpiryMonth] = useState("");
   const [expiryYear, setExpiryYear] = useState("");
@@ -151,7 +153,10 @@ export default function Index() {
             </div>
 
             {/* Save Button */}
-            <Button className="w-full h-12 bg-payment hover:bg-payment/90 text-white font-medium text-base rounded-lg shadow-sm">
+            <Button
+              onClick={() => navigate("/duration")}
+              className="w-full h-12 bg-payment hover:bg-payment/90 text-white font-medium text-base rounded-lg shadow-sm"
+            >
               Save
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>

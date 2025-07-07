@@ -14,7 +14,7 @@ export default function Zone() {
 
   const handleContinue = () => {
     if (zoneNumber.trim()) {
-      navigate("/duration");
+      navigate("/payment");
     }
   };
 
