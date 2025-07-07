@@ -10,7 +10,7 @@ export default function Terms() {
   };
 
   const handleAccept = () => {
-    navigate("/zone");
+    navigate("/profile");
   };
 
   const handleDecline = () => {
